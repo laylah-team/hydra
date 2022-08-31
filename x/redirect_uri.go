@@ -27,3 +27,9 @@ func IsRedirectURISecure(rc redirectConfiguration) func(context.Context, *url.UR
 		return false
 	}
 }
+
+func IsDevRedirectURISecure(rc redirectConfiguration) func(redirectURI *url.URL) bool {
+	return func(redirectURI *url.URL) bool {
+		return true
+	}
+}
